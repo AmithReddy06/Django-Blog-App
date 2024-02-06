@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<br /><br /><br /><br /><br /><br />
+<div class="create-article">
+
+<br /><br />
+    <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data"> <!--App name is articles, url is create -->
+        {% csrf_token %}
+        {{form}}  <!--see line no.20 in views.py, key name -->
+         <input type="submit" value="Publish">
+      </form> 
+
+                       
+</div>  
+{% endblock %}
+
+
+
+<h2>Write Up a New Article</h2>
+

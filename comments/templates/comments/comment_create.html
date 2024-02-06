@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <h1>Create a new comment</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="article" value="{{ article.pk }}">
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
+
+

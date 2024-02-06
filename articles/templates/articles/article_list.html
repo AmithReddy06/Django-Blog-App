@@ -1,0 +1,55 @@
+
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+<br /><br /><br /><br /><br /><br /><br /><br />
+        <h1>Latest...</h1>
+       
+
+        
+
+         <div class="articles">
+            {% for article in articles %}
+            <div class="article">
+                
+                  <h2> <a href="{% url 'articles:detail' slug=article.slug %}">{{ article.title }}</a> </h2>
+                  <p>{{ article.snippet }}</p>  
+                  <p>{{ article.date }}</p>
+                    <br><br>
+            </div>
+            {% endfor %}
+        </div> 
+   {% endblock %}
+
+
+   <!--
+
+<div class="container">       
+    <div class="row">
+
+<div class="articles">
+            {% for article in articles %}
+
+    <div class ="col-sm-4">
+    
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>{{ article.title }}</h2>
+            </div>
+            <div class="panel-body">
+                <p>{{ article.snippet }}</p>  
+            </div>
+            <div class="panel-footer">
+                <p>{{ article.date }}</p>  
+            </div>
+        </div>
+    </div>
+     {% endfor %}
+
+</div>
+
+</div>
+</div>
+
+   -->

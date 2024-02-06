@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background-image: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80');">
+	<br><br><br><br>
+    <br><br><br><br><br><br>
+    <div class="container">
+		<h1 class="text-center mb-4">Login Page</h1>
+		<form id="login-form" method="post" action="">
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="text" class="form-control" id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" class="form-control" id="password" name="password" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+		<p class="text-center mt-4">Don't have an account? <a href="signup.html">Signup</a></p>
+	</div>
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- Custom JS -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+<script>
+    // Get the login form element
+const loginForm = document.getElementById("login-form");
+
+// Add a submit event listener to the form
+loginForm.addEventListener("submit", function(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Get the username and password inputs
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+
+  // Get the values of the inputs
+  const username = usernameInput.value;
+  const password = passwordInput.value;
+
+  // TODO: Validate the username and password
+
+  // Redirect the user to the main articles page
+  window.location.href = "main.html";
+});
+
+</script>  
+ </html>
+

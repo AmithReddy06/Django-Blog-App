@@ -1,0 +1,34 @@
+{% extends 'base_layout.html' %}
+
+
+{% block content %}
+
+<h1>Log-in</h1>
+
+<form class="site-form" action="{% url 'accounts:login' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+    {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{request.GET.next}}">
+        {% endif %}
+    <input type="submit" value="Log-in"/>
+</form>
+
+
+{% endblock %}
+
+
+
+<!--
+    reddyamit8@gmail.com
+This code appears to be written in Django's templating language, 
+and it's checking if there is a "next" key present in the GET parameters 
+of the current request. If the key is present, it creates a hidden input
+ field with the name "next" and sets its value to the value of the "next" key 
+ in the GET parameters.
+
+This is commonly used in Django web applications to redirect the user to a 
+specific page after completing an action, such as logging in or submitting a form. 
+The "next" parameter allows the application to remember the original page the user
+ was on and redirect them back to it after the action is completed.
+-->
