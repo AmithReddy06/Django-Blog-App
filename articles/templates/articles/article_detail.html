@@ -1,7 +1,7 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-<style>
+{% comment %} <style>
     /* Style for the top-level navigation */
     nav {
       background-color: #333;
@@ -73,7 +73,7 @@
       cursor: pointer;
     }
     
-</style>
+</style> {% endcomment %}
 
 <br /><br /><br /><br /><br /><br />
 <div class="article-detail">
@@ -83,7 +83,7 @@
     <br /><br /><br /><br />
     <div class="article">
         <h2>{{article.title}}</h2>
-        <img src="{{article.thumb.url}}"/>
+        <img class="imageClass" src="{{article.thumb.url}}"/>
         <p>{{article.body}}</p>
         <p>{{article.date}}</p>
         <p>{{article.author}}</p>

@@ -16,23 +16,22 @@ source venv/bin/activate
 
 ## Install dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```
+ pip install -r requirements.txt
+```
 
 ### Database Setup
 ##  Apply database migrations:
 
-    ```bash
-    python manage.py migrate
-    ```
+```
+python manage.py migrate
+```
 
 ### Running the Server
 
 ## Start the development server:
 
 ```
-bash
 python manage.py runserver
 ```
 
